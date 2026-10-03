@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistant IA cantonal — prototype scripté · 92 Logics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#composer">Aller au message</a>
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">92</span>
+      <div>
+        <p class="brand-name">92 Logics</p>
+        <p class="brand-sub" id="brand-sub">Prototype scripté · Islamabad</p>
+      </div>
+    </div>
+    <p class="stamp" id="stamp">Pas un système cantonal · pas une offre</p>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-fr" class="on" aria-pressed="true">FR</button>
+      <button type="button" id="lang-en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <div class="banner" id="banner" role="note"></div>
+
+  <main class="layout">
+    <aside class="facts" aria-labelledby="facts-title">
+      <h1 id="facts-title"></h1>
+      <p class="lede" id="facts-lede"></p>
+      <dl id="fact-list"></dl>
+      <h2 id="sources-title"></h2>
+      <ul class="sources" id="source-list"></ul>
+    </aside>
+
+    <section class="chat" aria-labelledby="chat-title">
+      <div class="chat-head">
+        <h2 id="chat-title"></h2>
+        <p id="chat-note"></p>
+      </div>
+      <div id="log" class="log" role="log" aria-live="polite" aria-relevant="additions"></div>
+      <div class="chips" id="chips"></div>
+      <form id="composer" class="composer">
+        <label class="sr" for="input" id="input-label"></label>
+        <textarea id="input" rows="2" autocomplete="off"></textarea>
+        <button type="submit" id="send"></button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">Prototype by 92 Logics · cowork@92logics.com · not an official canton system.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
